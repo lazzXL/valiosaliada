@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '../assets/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,13 +9,22 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <span className="text-2xl font-bold text-blue-600">Valiosaliada</span>
+            <div className="flex items-center">
+              <div className="flex-shrink-0 flex items-center">
+                <img 
+                  src={logo} 
+                  alt="Logo da Valiosaliada" 
+                  className="h-12 w-auto sm:h-16"
+                />
+              </div>
+              
+            </div>
           </div>
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#inicio" className="text-gray-700 hover:text-blue-600">Início</a>
-            <a href="#servicos" className="text-gray-700 hover:text-blue-600">Serviços</a>
-            <a href="#projetos" className="text-gray-700 hover:text-blue-600">Projetos</a>
-            <a href="#contato" className="text-gray-700 hover:text-blue-600">Contato</a>
+            <a href="#inicio" className="text-gray-700 hover:text-green-600">Início</a>
+            <a href="#servicos" className="text-gray-700 hover:text-green-600">Serviços</a>
+            <a href="#projetos" className="text-gray-700 hover:text-green-600">Projetos</a>
+            <a href="#contato" className="text-gray-700 hover:text-green-600">Contato</a>
           </div>
           <div className="md:hidden flex items-center">
             <button 
@@ -40,28 +50,28 @@ const Navbar = () => {
         <div className="md:hidden bg-white py-4 px-4 border-t">
           <a 
             href="#inicio" 
-            className="block py-2 text-gray-700 hover:text-blue-600"
+            className="block py-2 text-gray-700 hover:text-green-600"
             onClick={() => setIsOpen(false)}
           >
             Início
           </a>
           <a 
             href="#servicos" 
-            className="block py-2 text-gray-700 hover:text-blue-600"
+            className="block py-2 text-gray-700 hover:text-green-600"
             onClick={() => setIsOpen(false)}
           >
             Serviços
           </a>
           <a 
             href="#projetos" 
-            className="block py-2 text-gray-700 hover:text-blue-600"
+            className="block py-2 text-gray-700 hover:text-green-600"
             onClick={() => setIsOpen(false)}
           >
             Projetos
           </a>
           <a 
             href="#contato" 
-            className="block py-2 text-gray-700 hover:text-blue-600"
+            className="block py-2 text-gray-700 hover:text-green-600"
             onClick={() => setIsOpen(false)}
           >
             Contato
